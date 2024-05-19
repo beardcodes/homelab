@@ -1,15 +1,49 @@
-# homelab
+# Docker Application Installer
 
+This is a Bash script for automating the installation of Docker and various Docker applications on Linux systems. It provides an easy way to set up Docker, Docker Compose, NGINX Proxy Manager, and other applications commonly used in Docker environments.
 
-This script includes:
+## Features
 
-1. Error handling: Error messages are displayed with meaningful descriptions, and the script exits when an error occurs.
-2. Check for root privileges: The script checks if it's being run with root privileges and exits if not.
-3. Check for internet connectivity: The script checks for internet connectivity before attempting to download files.
-4. Modularization: Functions are used for different installation tasks, improving readability and maintainability.
-5. Command availability check: Before attempting to install Docker and Docker Compose, the script checks if they are already installed.
-6. Installation functions: Separate functions are provided for installing Docker, Docker Compose, NGINX Proxy Manager, and other applications. This makes it easy to add or modify installation steps for each application.
-7. Main function: The main function orchestrates the entire installation process.
-8. Clearer output: Messages are displayed to indicate the progress of each installation step.
+- **Automated Installation**: The script automates the installation process for Docker, Docker Compose, NGINX Proxy Manager, and other applications.
+- **Error Handling**: Error messages are displayed with meaningful descriptions, and the script exits when an error occurs.
+- **Root Privilege Check**: The script checks if it's being run with root privileges and exits if not.
+- **Internet Connectivity Check**: Checks for internet connectivity before attempting to download files.
+- **Modular Design**: Uses separate functions for different installation tasks, improving readability and maintainability.
+- **Command Availability Check**: Checks if Docker and Docker Compose are already installed before attempting to install them.
+- **Customization**: Easily customizable to add or modify installation steps for other applications.
 
-You can add installation steps for other applications inside the `install_other_apps` function. Make sure to replace the placeholder comments with actual installation commands for each application.
+## Usage
+
+1. Clone this repository to your local machine:
+
+    ```bash
+    git clone https://github.com/your-username/docker-application-installer.git
+    ```
+
+2. Navigate to the cloned directory:
+
+    ```bash
+    cd docker-application-installer
+    ```
+
+3. Make the script executable:
+
+    ```bash
+    chmod +x installer.sh
+    ```
+
+4. Run the script as root:
+
+    ```bash
+    sudo ./installer.sh
+    ```
+
+5. Follow the prompts to select the OS/distro and choose the applications to install.
+
+## Contributing
+
+Contributions are welcome! If you find any bugs or have suggestions for improvements, please [open an issue](https://github.com/your-username/docker-application-installer/issues) or [create a pull request](https://github.com/your-username/docker-application-installer/pulls).
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
