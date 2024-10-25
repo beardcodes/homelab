@@ -1,0 +1,14 @@
+---
+services:
+  filebrowser:
+    image: filebrowser/filebrowser:s6
+    container_name: filebrowser
+    volumes:
+      - /home/beardnetwork:/srv #Change to match your directory
+      - /home/beardnetwork/docker/filebrowser/filebrowser.db:/database/filebrowser.db #Change to match your directory
+      - /home/beardnetwork/docker/filebrowser/settings.json:/config/settings.json #Change to match your directory
+    environment:
+      - PUID=1000
+      - PGID=1000
+    ports:
+      - 8099:80 #Change the port if needed

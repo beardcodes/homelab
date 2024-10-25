@@ -1,0 +1,24 @@
+---
+networks:
+  # create this network in command line using `docker network create proxy-net`
+  proxy-net:
+    name: proxy-net
+    external: true
+
+
+services:
+  guacamole:
+    image: jwetzell/guacamole
+    container_name: guacamole
+    volumes:
+      - ./postgres:/config
+    ports:
+      - 8194:8080
+    networks:
+      - proxy-net
+      
+volumes:
+  postgres:
+    driver: local
+
+
